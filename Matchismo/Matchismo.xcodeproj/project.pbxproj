@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4ABD151D1A4D91AA00DB7863 /* CardMatchingGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ABD151C1A4D91AA00DB7863 /* CardMatchingGame.m */; };
 		4AE1B3DA1A4AD3E2001EF185 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AE1B3D91A4AD3E2001EF185 /* main.m */; };
 		4AE1B3DD1A4AD3E2001EF185 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AE1B3DC1A4AD3E2001EF185 /* AppDelegate.m */; };
 		4AE1B3E01A4AD3E2001EF185 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AE1B3DF1A4AD3E2001EF185 /* ViewController.m */; };
@@ -31,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4ABD151B1A4D91AA00DB7863 /* CardMatchingGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardMatchingGame.h; sourceTree = "<group>"; };
+		4ABD151C1A4D91AA00DB7863 /* CardMatchingGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardMatchingGame.m; sourceTree = "<group>"; };
 		4AE1B3D41A4AD3E2001EF185 /* Matchismo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Matchismo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AE1B3D81A4AD3E2001EF185 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4AE1B3D91A4AD3E2001EF185 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -135,6 +138,8 @@
 		4AE1B4001A4AEC45001EF185 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4ABD151B1A4D91AA00DB7863 /* CardMatchingGame.h */,
+				4ABD151C1A4D91AA00DB7863 /* CardMatchingGame.m */,
 				4AE1B3FD1A4AEC3D001EF185 /* Card.h */,
 				4AE1B4041A4AF636001EF185 /* Deck.h */,
 				4AE1B4051A4AF636001EF185 /* Deck.m */,
@@ -251,6 +256,7 @@
 				4AE1B3DD1A4AD3E2001EF185 /* AppDelegate.m in Sources */,
 				4AE1B3DA1A4AD3E2001EF185 /* main.m in Sources */,
 				4AE1B4031A4AED1F001EF185 /* PlayingCard.m in Sources */,
+				4ABD151D1A4D91AA00DB7863 /* CardMatchingGame.m in Sources */,
 				4AE1B4091A4AFD8F001EF185 /* PlayingCardDeck.m in Sources */,
 				4AE1B4061A4AF636001EF185 /* Deck.m in Sources */,
 				4AE1B3FF1A4AEC3D001EF185 /* Card.m in Sources */,
