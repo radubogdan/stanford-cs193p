@@ -13,7 +13,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *flipsLabel;
 @property (nonatomic) int flipCount;
-@property (strong, nonatomic) PlayingCardDeck *deck;
+@property (strong, nonatomic) Deck *deck;
 
 @end
 
@@ -24,7 +24,7 @@
     self.flipsLabel.text = [NSString stringWithFormat:@"Flips: %d", self.flipCount];
 }
 
-- (PlayingCardDeck *)deck {
+- (Deck *)deck {
     if (!_deck) {
         _deck = [[PlayingCardDeck alloc] init];
     }
@@ -32,18 +32,28 @@
 }
 
 - (IBAction)touchCardButton:(UIButton *)sender {
-        
-    if ([sender.currentTitle length]) {
+    NSString *currentTitle = sender.currentTitle;
+    
+    if ([currentTitle length] && ![currentTitle  isEqual: @"Out of cards"]) {
         [sender setBackgroundImage:[UIImage imageNamed:@"cardback"]
                           forState:UIControlStateNormal];
         [sender setTitle:@"" forState:UIControlStateNormal];
+        self.flipCount++;
     } else {
-        [sender setBackgroundImage:[UIImage imageNamed:@"cardfront"]
-                          forState:UIControlStateNormal];
-        [sender setTitle:[self.deck drawRandomCard].contents
-                forState:UIControlStateNormal];
+        NSString *cardTitle = [self.deck drawRandomCard].contents;
+        
+        if (cardTitle) {
+            [sender setTitle:cardTitle
+                    forState:UIControlStateNormal];
+            [sender setBackgroundImage:[UIImage imageNamed:@"cardfront"]
+                              forState:UIControlStateNormal];
+            self.flipCount++;
+        } else {
+            [sender setTitle:@"Out of cards" forState:UIControlStateNormal];
+            [sender setBackgroundImage:nil
+                              forState:UIControlStateNormal];
+        }
     }
-    self.flipCount++;
 }
 
 @end
