@@ -16,6 +16,14 @@
 
 @implementation CardMatchingGame
 
+- (NSUInteger)gameMode {
+    if (!_gameMode) {
+        _gameMode = 2;
+    }
+    
+    return _gameMode;
+}
+
 - (NSMutableArray *)cards {
     if (!_cards) _cards = [[NSMutableArray alloc] init];
     return _cards;
@@ -42,7 +50,7 @@
 }
 
 - (Card *)cardAtIndex:(NSUInteger)index {
-    return [self.cards objectAtIndex:index];
+    return (index < [self.cards count]) ? self.cards[index] : nil;
 }
 
 static const int MISMATCH_PENALTY = 2;
@@ -56,21 +64,44 @@ static const int COST_TO_CHOOSE_CARD = 1;
         if (card.isChosen) {
             card.chosen = NO;
         } else {
-            // match against other chosen cards
+            // Make an array with chosen cards
+            NSMutableArray *otherCards = [NSMutableArray array];
+            
             for (Card *otherCard in self.cards) {
                 if (otherCard.isChosen && !otherCard.isMatched) {
-                    int matchScore = [card match:@[otherCard]];
+                    [otherCards addObject:otherCard];
+                }
+            }
+            
+            // match based on gameMode sent by UI
+            if ([otherCards count] == self.gameMode - 1) {
+                int matchScore = [card match:otherCards];
+            
+                if (matchScore) {
+                    self.score += matchScore * MATCH_BONUS;
+                    card.matched = YES;
                     
-                    if (matchScore) {
-                        self.score += matchScore * MATCH_BONUS;
+                    // Save here when match occur in multiple game
+                    NSString *otherCardsLiveResults = @"";
+                    
+                    for (Card *otherCard in otherCards) {
                         otherCard.matched = YES;
-                        card.matched = YES;
-                    } else {
-                        self.score -= MISMATCH_PENALTY;
-                        otherCard.chosen = NO;
+                        otherCardsLiveResults = [otherCardsLiveResults stringByAppendingFormat:@"%@", otherCard.contents];
                     }
-
-                    break;
+                    
+                    self.gameLiveResults = [NSString stringWithFormat:@"Matched %@%@ for %d points", card.contents, otherCardsLiveResults, matchScore * MATCH_BONUS ];
+                } else {
+                    self.score -= MISMATCH_PENALTY;
+                    
+                    // Save here when mismatch occur in multiple game
+                    NSString *otherCardsLiveResults = @"";
+                    
+                    for (Card *otherCard in otherCards) {
+                        otherCard.chosen = NO;
+                        otherCardsLiveResults = [otherCardsLiveResults stringByAppendingFormat:@"%@", otherCard.contents];
+                    }
+                    
+                    self.gameLiveResults = [NSString stringWithFormat:@"%@%@ don't match! %d point penalty", card.contents, otherCardsLiveResults, MISMATCH_PENALTY];
                 }
             }
             
