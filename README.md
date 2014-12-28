@@ -1,5 +1,7 @@
 ###stanford-cs193p
 
+**WIP**
+
 **Fall 2013 iOS course by Paul Hegarty**
 
 Contents:
@@ -13,3 +15,12 @@ the example app in first three lectures. In this repository there is also my hom
     - Controller interprets Model for View (and vice-versa)
     - Objective C (Classes, properties, methods, types and memory, NSString, NSArray, Creating Objects in the Heap etc)
     
+2. [Attributor](https://github.com/radubogdan/stanford-cs193p/tree/master/Attributor). Updated with lecture 5.
+
+  It helped me understand:
+    - UITextView
+      - Set its text and attributes via its NSMutableAttributedString
+      - Advanced layout in UITextView with TextKit
+    - View Controller Lifecycle (viewDidLoad, viewWillAppear, viewWillDisappear, view{Will,Did}LayoutSubviews, didReceiveMemoryWarning, awakeFromNib)
+    - NSNotification (radio station :D)
+    - NSAttributedString, NSMutableAttributedString, NSTextStorage
