@@ -14,8 +14,9 @@ the example app in first three lectures. In this repository there is also my hom
     - View is (so far) completely generic UI elements
     - Controller interprets Model for View (and vice-versa)
     - Objective C (Classes, properties, methods, types and memory, NSString, NSArray, Creating Objects in the Heap etc)
+    - Polymorphism
     
-2. [Attributor](https://github.com/radubogdan/stanford-cs193p/tree/master/Attributor). Updated with lecture 5.
+2. [Attributor](https://github.com/radubogdan/stanford-cs193p/tree/master/Attributor). Updated with lecture 6.
 
   It helped me understand:
     - UITextView
@@ -24,3 +25,5 @@ the example app in first three lectures. In this repository there is also my hom
     - View Controller Lifecycle (viewDidLoad, viewWillAppear, viewWillDisappear, view{Will,Did}LayoutSubviews, didReceiveMemoryWarning, awakeFromNib)
     - NSNotification (radio station :D)
     - NSAttributedString, NSMutableAttributedString, NSTextStorage
+    - UINavigationController & Segues
+
