@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A3FD07D1A535DBC006AB32B /* TextStatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3FD07C1A535DBC006AB32B /* TextStatsViewController.m */; };
 		4AC8E7B31A50466100CC0FB4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC8E7B21A50466100CC0FB4 /* main.m */; };
 		4AC8E7B61A50466100CC0FB4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC8E7B51A50466100CC0FB4 /* AppDelegate.m */; };
 		4AC8E7B91A50466100CC0FB4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC8E7B81A50466100CC0FB4 /* ViewController.m */; };
@@ -27,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4A3FD07B1A535DBC006AB32B /* TextStatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextStatsViewController.h; sourceTree = "<group>"; };
+		4A3FD07C1A535DBC006AB32B /* TextStatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextStatsViewController.m; sourceTree = "<group>"; };
 		4AC8E7AD1A50466100CC0FB4 /* Attributor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Attributor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AC8E7B11A50466100CC0FB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4AC8E7B21A50466100CC0FB4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -84,6 +87,8 @@
 				4AC8E7B71A50466100CC0FB4 /* ViewController.h */,
 				4AC8E7B81A50466100CC0FB4 /* ViewController.m */,
 				4AC8E7BA1A50466100CC0FB4 /* Main.storyboard */,
+				4A3FD07B1A535DBC006AB32B /* TextStatsViewController.h */,
+				4A3FD07C1A535DBC006AB32B /* TextStatsViewController.m */,
 				4AC8E7BD1A50466100CC0FB4 /* Images.xcassets */,
 				4AC8E7BF1A50466100CC0FB4 /* LaunchScreen.xib */,
 				4AC8E7B01A50466100CC0FB4 /* Supporting Files */,
@@ -222,6 +227,7 @@
 				4AC8E7B91A50466100CC0FB4 /* ViewController.m in Sources */,
 				4AC8E7B61A50466100CC0FB4 /* AppDelegate.m in Sources */,
 				4AC8E7B31A50466100CC0FB4 /* main.m in Sources */,
+				4A3FD07D1A535DBC006AB32B /* TextStatsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +418,7 @@
 				4AC8E7D21A50466100CC0FB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4AC8E7D31A50466100CC0FB4 /* Build configuration list for PBXNativeTarget "AttributorTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +427,7 @@
 				4AC8E7D51A50466100CC0FB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
